@@ -14,13 +14,7 @@
 }
 
 body {
-  background-color: rgb(22, 150, 255);
-}
-
-.container {
-  /* display: flex;
-    position: relative; */
-  /* height: 100vh; */
+  background-color: var(--main-color);
 }
 
 /* Header ---------------------------------------------------------------------- */
@@ -28,10 +22,8 @@ body {
 .container .header {
   background-color: var(--second-color);
   width: 100vw;
-  position: fixed;
-  left: 0;
-  top: 0;
   padding: 4%;
+  border-bottom: 1px solid white;
 }
 
 .container .header .title-container {
@@ -52,38 +44,71 @@ body {
 
 /* Main ------------------------------------------------------------------------ */
 
-.container .main{
-    margin-top: 10vh;
+.container .main .daily-challenges .difficulty-controls {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-color);
+  display: flex;
+  width: 100%;
+  padding: 0.5vh 0;
 }
 
-.container .main .daily-challenges .row {
+.container .main .daily-challenges .difficulty-controls.sticky{
+  box-shadow: 0px -3px 15px 5px rgba(0,0,0,0.75);
+}
+
+.container .main .daily-challenges .difficulty-controls .difficulty-control{
+  padding: 4% 7.5%;
+}
+
+.container .main .daily-challenges .difficulty-controls .difficulty-control.fas::before{
+  font-size: 1.5em;
+}
+
+.container .main .daily-challenges .difficulty-controls .difficulty-tab {
+  font-weight: bold;
+  width: 33.3333%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.container .main .daily-challenges .difficulty-controls .tab-title{
+  letter-spacing: 0.2em;
+}
+
+.container .main .daily-challenges .difficulty-tab-content{
+  margin-top: -1.5vh;
+}
+
+.container .main .daily-challenges .difficulty-tab-content .row {
   width: 100%;
   display: flex;
   margin: 6% auto;
 }
 
-.container .main .daily-challenges .row .card:last-child{
-    margin-left: -0.4%;
+.container .main .daily-challenges .difficulty-tab-content .row .card:last-child {
+  margin-left: -0.4%;
 }
 
-.container .main .daily-challenges .row .card {
+.container .main .daily-challenges .difficulty-tab-content .row .card {
   margin: auto;
   background-color: white;
   width: 40%;
   border-radius: 10px;
 }
 
-.container .main .daily-challenges .row .card .challenge-img {
+.container .main .daily-challenges .difficulty-tab-content .row .card .challenge-img {
   width: 100%;
   padding: 5% 5% 0 5%;
 }
 
-.container .main .daily-challenges .row .card .card-body {
-  /* height: 6vh; */
+.container .main .daily-challenges .difficulty-tab-content .row .card .card-body {
   border-top: 2px dotted var(--main-color);
 }
 
-.container .main .daily-challenges .row .card .card-body .challenge-name {
+.container .main .daily-challenges .difficulty-tab-content .row .card .card-body .challenge-name {
   color: var(--second-color);
   text-align: center;
   font-weight: 800;
@@ -92,8 +117,8 @@ body {
 
 /* Footer ---------------------------------------------------------------------- */
 
-.container .footer-filler{
-    height: 7.5vh;
+.container .footer-filler {
+  height: 9vh;
 }
 
 .container .footer {
@@ -102,21 +127,43 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
+  box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.75);
 }
 
-.container .footer .button {
+.container .footer .nav-button {
   margin: auto;
   width: 33.3%;
   text-align: center;
-  background-color: black;
+  background-color: var(--main-color);
   font-weight: bold;
-  padding: 6% 0;
+  padding: 4% 0;
 }
 
-.container .footer .button:first-child {
+.container .footer .nav-button:first-child {
   border-right: 2px solid var(--main-color);
 }
 
-.container .footer .button:last-child {
+.container .footer .nav-button:last-child {
   border-left: 2px solid var(--main-color);
+}
+
+.container .footer .nav-button .icon-container{
+  border-radius: 200px;
+  height: 10vw;
+  width: 10vw;
+  margin: auto;
+  padding-top: 6%;
+}
+
+.container .footer .nav-button .icon-container.active{
+  background-color: white;
+}
+
+.container .footer .nav-button .fas::before {
+  font-size: 6.5vw;
+  color: white;
+}
+
+.container .footer .nav-button .icon-container.active .fas::before{
+  color: var(--main-color);
 }
