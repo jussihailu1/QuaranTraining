@@ -23,9 +23,9 @@ const pages = document.getElementsByClassName('page');
 
 for (const button of navButtons) {
     button.onclick = function () {
-        for (const btn of navButtons) { btn.firstChild.classList.remove("active"); }
+        for (const btn of navButtons) { btn.children[0].classList.remove("active"); }
         const selectedPage = button.id.split('-')[1];
-        button.firstChild.classList.add("active");
+        button.children[0].classList.add("active");
         navigatePage(selectedPage);
     }
 }
