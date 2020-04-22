@@ -53,15 +53,19 @@ body {
   padding: 0.5vh 0;
 }
 
-.container .main .daily-challenges .difficulty-controls.sticky{
-  box-shadow: 0px -3px 15px 5px rgba(0,0,0,0.75);
+.container .main .daily-challenges .difficulty-controls.sticky {
+  box-shadow: 0px -3px 15px 5px rgba(0, 0, 0, 0.75);
 }
 
-.container .main .daily-challenges .difficulty-controls .difficulty-control{
+.container .main .daily-challenges .difficulty-controls .difficulty-control {
   padding: 4% 7.5%;
 }
 
-.container .main .daily-challenges .difficulty-controls .difficulty-control.fas::before{
+.container
+  .main
+  .daily-challenges
+  .difficulty-controls
+  .difficulty-control.fas::before {
   font-size: 1.5em;
 }
 
@@ -74,11 +78,11 @@ body {
   padding-bottom: 3%;
 }
 
-.container .main .daily-challenges .difficulty-controls .tab-title{
+.container .main .daily-challenges .difficulty-controls .tab-title {
   letter-spacing: 0.2em;
 }
 
-.container .main .daily-challenges .difficulty-tab-content{
+.container .main .daily-challenges .difficulty-tab-content {
   margin-top: -1.5vh;
 }
 
@@ -88,7 +92,12 @@ body {
   margin: 6% auto;
 }
 
-.container .main .daily-challenges .difficulty-tab-content .row .card:last-child {
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card:last-child {
   margin-left: -0.4%;
 }
 
@@ -99,16 +108,35 @@ body {
   border-radius: 10px;
 }
 
-.container .main .daily-challenges .difficulty-tab-content .row .card .challenge-img {
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card
+  .challenge-img {
   width: 100%;
   padding: 5% 5% 0 5%;
 }
 
-.container .main .daily-challenges .difficulty-tab-content .row .card .card-body {
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card
+  .card-body {
   border-top: 2px dotted var(--main-color);
 }
 
-.container .main .daily-challenges .difficulty-tab-content .row .card .card-body .challenge-name {
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card
+  .card-body
+  .challenge-name {
   color: var(--second-color);
   text-align: center;
   font-weight: 800;
@@ -127,7 +155,7 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  box-shadow: 0px 2px 15px 5px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, 0.75);
 }
 
 .container .footer .nav-button {
@@ -147,7 +175,7 @@ body {
   border-left: 2px solid var(--main-color);
 }
 
-.container .footer .nav-button .icon-container{
+.container .footer .nav-button .icon-container {
   border-radius: 200px;
   height: 10vw;
   width: 10vw;
@@ -155,7 +183,7 @@ body {
   padding-top: 6%;
 }
 
-.container .footer .nav-button .icon-container.active{
+.container .footer .nav-button .icon-container.active {
   background-color: white;
 }
 
@@ -164,6 +192,23 @@ body {
   color: white;
 }
 
-.container .footer .nav-button .icon-container.active .fas::before{
+.container .footer .nav-button .icon-container.active .fas::before {
   color: var(--main-color);
+}
+
+/* Friends feed ------------------------------------------------------------------------ */
+
+.post {
+  /* width: 100vw; */
+}
+
+.post .user{
+  text-align: center;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0);
+}
+
+.post .post-vid {
+  display: block;
+  margin: 0 auto;
 }
