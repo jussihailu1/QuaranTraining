@@ -1,14 +1,14 @@
 const cacheName = "Static_V1";
 const appFiles = [
-  "/manifest.json",
-  "/script.js",
-  "/style.css",
-  "/favicon.ico",
-  "/src/wall-push-up.png",
-  "/src/src/elbow-plank.png",
-  "/src/counter-top-push-up.png",
-  "/index.html",
-  "/"
+  "./manifest.json",
+  "./script.js",
+  "./style.css",
+  "./favicon.ico",
+  "./src/wall-push-up.png",
+  "./src/src/elbow-plank.png",
+  "./src/counter-top-push-up.png",
+  "./index.html",
+  "./"
 ];
 
 self.addEventListener("install", (installing) => {
@@ -18,7 +18,8 @@ self.addEventListener("install", (installing) => {
     caches.open(cacheName).then((cache) => {
       console.log("Service Worker: Caching important offline files");
       return cache.addAll(appFiles);
-    })
+    }),
+    console.log('caching succeed')
   );
 
   console.log("Service Worker: I am being installed, hello world!");
@@ -52,15 +53,15 @@ self.addEventListener("fetch", fetching => {
 });
 
 self.addEventListener("push", (pushing) => {
-  if (pushing.data) {
-    pushdata = JSON.parse(pushing.data.text());
-    console.log("Service Worker: I received this:", pushdata);
-    if ((pushdata["title"] != "") && (pushdata["message"] != "")) {
-      const options = { body: pushdata["message"] }
-      self.registration.showNotification(pushdata["title"], options);
+  if(pushing.data){
+    pushdata=JSON.parse(pushing.data.text());		
+    console.log("Service Worker: I received this:",pushdata);
+    if((pushdata["title"]!="")&&(pushdata["message"]!="")){			
+      const options={ body:pushdata["message"] }
+      self.registration.showNotification(pushdata["title"],options);
       console.log("Service Worker: I made a notification for the user");
     } else {
-      console.log("Service Worker: I didn't make a notification for the user, not all the info was there :(");
+      console.log("Service Worker: I didn't make a notification for the user, not all the info was there :(");			
     }
   }
 })
