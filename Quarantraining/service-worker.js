@@ -7,6 +7,7 @@ const appFiles = [
   "/src/challenges/wall-push-up.png",
   "/src/challenges/elbow-plank.png",
   "/src/challenges/counter-top-push-up.png",
+  "/src/challenges/NO-CHALLENGES.jpg",
   "/index.html",
   "/"
 ];

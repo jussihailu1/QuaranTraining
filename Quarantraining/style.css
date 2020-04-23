@@ -26,6 +26,12 @@ body {
   border-bottom: 1px solid white;
 }
 
+.container .header.fixed {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
 .container .header .title-container {
   width: fit-content;
 }

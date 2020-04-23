@@ -37,6 +37,7 @@ for (const button of navButtons) {
     const selectedPage = button.id.split("-")[1];
     button.children[0].classList.add("active");
     navigatePage(selectedPage);
+    selectedPage != "home" ? document.getElementById('header').classList.add("fixed") : document.getElementById('header').classList.remove("fixed");
   };
 }
 
@@ -106,14 +107,14 @@ difficulty.controls.right.onclick = function () {
 document.onscroll = function () {
   if (
     difficulty.controls.container.offsetTop >
-      difficulty.controls.naturalPosition &&
+    difficulty.controls.naturalPosition &&
     !difficulty.controls.sticky
   ) {
     difficulty.controls.sticky = true;
     difficulty.controls.container.classList.add("sticky");
   } else if (
     difficulty.controls.container.offsetTop ==
-      difficulty.controls.naturalPosition &&
+    difficulty.controls.naturalPosition &&
     difficulty.controls.sticky
   ) {
     difficulty.controls.sticky = false;
