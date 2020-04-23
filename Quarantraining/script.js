@@ -28,6 +28,7 @@ document.scrollingElement.scrollTo(0, 0);
 
 const navButtons = document.getElementsByClassName("nav-button");
 const pages = document.getElementsByClassName("page");
+const header = document.getElementById('header');
 
 for (const button of navButtons) {
   button.onclick = function () {
@@ -37,7 +38,7 @@ for (const button of navButtons) {
     const selectedPage = button.id.split("-")[1];
     button.children[0].classList.add("active");
     navigatePage(selectedPage);
-    selectedPage != "home" ? document.getElementById('header').classList.add("fixed") : document.getElementById('header').classList.remove("fixed");
+    selectedPage != "home" ? header.classList.add("fixed") : header.classList.remove("fixed");
   };
 }
 
@@ -47,6 +48,23 @@ function navigatePage(selectedPage) {
       ? (page.hidden = false)
       : (page.hidden = true);
   }
+}
+
+// Selected dc
+
+const challengePage = document.getElementById('challenge-page');
+let sc;
+let scImg = document.getElementById('sc-img');
+let scName = document.getElementById('sc-name');
+let scId = document.getElementById('sc-id');
+
+function selectChallenge(id) {
+  for (const page of pages) { page.hidden = true; }
+  challengePage.hidden = false;
+
+  sc = dailyChallenges.find(dc => dc._id == id);
+  scName.innerHTML = sc.name;
+  scImg.src = sc.image;
 }
 
 // Daily challenges
@@ -158,8 +176,8 @@ function loadDailyChallenges() {
   let dcMediumString = "";
   let dcHardString = "";
 
-  function cardString(name, image) {
-    return `<div class="card">
+  function cardString(name, image, id) {
+    return `<div class="card" id="${id}"  onclick="selectChallenge(this.id)" >
               <img src="${image}" alt="${name}" class="challenge-img" />
               <div class="card-body">
                 <h5 class="challenge-name">${name.toUpperCase()}</h5>
@@ -170,7 +188,7 @@ function loadDailyChallenges() {
   for (let i = 0; i < easyChallenges.length; i += 2) {
     const dcs = [easyChallenges[i], easyChallenges[i + 1]]
     let dcString = '<div class="row">';
-    for (const dc of dcs) { dcString += cardString(dc.name, dc.image); }
+    for (const dc of dcs) { dcString += cardString(dc.name, dc.image, dc._id); }
     dcString += "</div>";
     dcEasyString += dcString;
   }
@@ -178,7 +196,7 @@ function loadDailyChallenges() {
   for (let i = 0; i < mediumChallenges.length; i += 2) {
     const dcs = [mediumChallenges[i], mediumChallenges[i + 1]]
     let dcString = '<div class="row">';
-    for (const dc of dcs) { dcString += cardString(dc.name, dc.image); }
+    for (const dc of dcs) { dcString += cardString(dc.name, dc.image, dc._id); }
     dcString += "</div>";
     dcMediumString += dcString;
   }
@@ -186,7 +204,7 @@ function loadDailyChallenges() {
   for (let i = 0; i < hardChallenges.length; i += 2) {
     const dcs = [hardChallenges[i], hardChallenges[i + 1]]
     let dcString = '<div class="row">';
-    for (const dc of dcs) { dcString += cardString(dc.name, dc.image); }
+    for (const dc of dcs) { dcString += cardString(dc.name, dc.image, dc._id); }
     dcString += "</div>";
     dcHardString += dcString;
   }
