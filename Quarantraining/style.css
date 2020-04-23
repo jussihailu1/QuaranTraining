@@ -1,0 +1,215 @@
+:root {
+  --main-color: rgb(25, 133, 221);
+  --second-color: rgb(0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Antic", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+/* Header ---------------------------------------------------------------------- */
+
+.container .header {
+  background-color: var(--second-color);
+  width: 100vw;
+  padding: 4%;
+  border-bottom: 1px solid white;
+}
+
+.container .header .title-container {
+  width: fit-content;
+}
+
+.container .header .menu-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 3.5%;
+  border-left: 1px solid white;
+}
+
+.container .header .menu-toggle .fa::before {
+  font-size: 2em;
+}
+
+/* Main ------------------------------------------------------------------------ */
+
+.container .main .daily-challenges .difficulty-controls {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-color);
+  display: flex;
+  width: 100%;
+  padding: 0.5vh 0;
+}
+
+.container .main .daily-challenges .difficulty-controls.sticky {
+  box-shadow: 0px -3px 15px 5px rgba(0, 0, 0, 0.75);
+}
+
+.container .main .daily-challenges .difficulty-controls .difficulty-control {
+  padding: 4% 7.5%;
+}
+
+.container
+  .main
+  .daily-challenges
+  .difficulty-controls
+  .difficulty-control.fas::before {
+  font-size: 1.5em;
+}
+
+.container .main .daily-challenges .difficulty-controls .difficulty-tab {
+  font-weight: bold;
+  width: 33.3333%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.container .main .daily-challenges .difficulty-controls .tab-title {
+  letter-spacing: 0.2em;
+}
+
+.container .main .daily-challenges .difficulty-tab-content {
+  margin-top: -1.5vh;
+}
+
+.container .main .daily-challenges .difficulty-tab-content .row {
+  width: 100%;
+  display: flex;
+  margin: 6% auto;
+}
+
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card:last-child {
+  margin-left: -0.4%;
+}
+
+.container .main .daily-challenges .difficulty-tab-content .row .card {
+  margin: auto;
+  background-color: white;
+  width: 40%;
+  border-radius: 10px;
+}
+
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card
+  .challenge-img {
+  width: 100%;
+  padding: 5% 5% 0 5%;
+}
+
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card
+  .card-body {
+  border-top: 2px dotted var(--main-color);
+  height: 5.5vh;
+}
+
+.container
+  .main
+  .daily-challenges
+  .difficulty-tab-content
+  .row
+  .card
+  .card-body
+  .challenge-name {
+  color: var(--second-color);
+  text-align: center;
+  font-weight: 800;
+  padding: 4%;
+}
+
+/* Footer ---------------------------------------------------------------------- */
+
+.container .footer-filler {
+  height: 9vh;
+}
+
+.container .footer {
+  width: 100%;
+  display: inline-flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, 0.75);
+}
+
+.container .footer .nav-button {
+  margin: auto;
+  width: 33.3%;
+  text-align: center;
+  background-color: var(--main-color);
+  font-weight: bold;
+  padding: 4% 0;
+}
+
+.container .footer .nav-button:first-child {
+  border-right: 2px solid var(--main-color);
+}
+
+.container .footer .nav-button:last-child {
+  border-left: 2px solid var(--main-color);
+}
+
+.container .footer .nav-button .icon-container {
+  border-radius: 200px;
+  height: 10vw;
+  width: 10vw;
+  margin: auto;
+  padding-top: 6%;
+}
+
+.container .footer .nav-button .icon-container.active {
+  background-color: white;
+}
+
+.container .footer .nav-button .fas::before {
+  font-size: 6.5vw;
+  color: white;
+}
+
+.container .footer .nav-button .icon-container.active .fas::before {
+  color: var(--main-color);
+}
+
+/* Friends feed ------------------------------------------------------------------------ */
+
+.post {
+  /* width: 100vw; */
+}
+
+.post .user{
+  text-align: center;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0);
+}
+
+.post .post-vid {
+  display: block;
+  margin: 0 auto;
+}
