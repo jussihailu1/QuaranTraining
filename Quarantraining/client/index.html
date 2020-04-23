@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="manifest" href="manifest.json" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quarantraining</title>
 
-    <!-- Font awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="data-acces.js"></script>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="manifest.json" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quarantraining</title>
+
+  <!-- Font awesome -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -29,326 +29,24 @@
       </div>
 
       <div class="main">
-        <div class="page daily-challenges"  id="nav-content-home">
+        <div class="page daily-challenges" id="nav-content-home">
           <div class="difficulty-controls" id="difficulty-controls">
-            <i
-              class="difficulty-control fas fa-chevron-left"
-              id="difficulty-control-left"
-            ></i>
+            <i class="difficulty-control fas fa-chevron-left" id="difficulty-control-left"></i>
             <div class="difficulty-tab">
               <h3 class="tab-title" id="tab-title">EASY</h3>
             </div>
-            <i
-              class="difficulty-control fas fa-chevron-right"
-              id="difficulty-control-right"
-            ></i>
+            <i class="difficulty-control fas fa-chevron-right" id="difficulty-control-right"></i>
           </div>
 
-          <div class="difficulty-tab-content" id="daily-challenges-easy">
+          <div class="difficulty-tab-content" id="daily-challenges-easy"></div>
+          <div class="difficulty-tab-content" hidden id="daily-challenges-medium"></div>
+          <div class="difficulty-tab-content" hidden id="daily-challenges-hard"> </div>
+          <div class="difficulty-tab-content" hidden id="daily-challenges-extreme">
             <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
+              <div class="card" style="margin: auto; margin-top: 40%;">
+                <img src="src/challenges/NO-CHALLENGES.jpg" alt="NO CHALLENGES" class="challenge-img" />
                 <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="difficulty-tab-content"
-            hidden
-            id="daily-challenges-medium"
-          >
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="difficulty-tab-content" hidden id="daily-challenges-hard">
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/wall-push-up.png"
-                  alt="Wall push-up"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">WALL PUSH-UPS</h5>
-                </div>
-              </div>
-              <div class="card">
-                <span class="points"></span>
-                <img
-                  src="src/elbow-plank.png"
-                  alt="Elbow plank"
-                  class="challenge-img"
-                />
-                <div class="card-body">
-                  <h5 class="challenge-name">ELBOW PLANK</h5>
+                  <h5 class="challenge-name">NO-CHALLENGES FOR THIS LEVEL YET</h5>
                 </div>
               </div>
             </div>
@@ -360,13 +58,15 @@
             <div class="user">
               <h3>LAURA KECHEN</h3>
             </div>
-            <video width="375" height="375" src="src\airsquat.mp4" onclick="this.play()"  poster="src\defposter.png" class="post-vid"></video>
+            <video width="375" height="375" src="src/challenges/airsquat.mp4" onclick="this.play()"
+              poster="src/challenges/defposter.png" class="post-vid"></video>
           </div>
           <div class="post">
             <div class="user">
               <h3>LAURA KECHEN</h3>
             </div>
-            <video width="375" height="375" src="src\airsquat.mp4" onclick="this.play()"   poster="src\defposter.png" class="post-vid"></video>
+            <video width="375" height="375" src="src/challenges/airsquat.mp4" onclick="this.play()"
+              poster="src/challenges/defposter.png" class="post-vid"></video>
           </div>
         </div>
 
@@ -398,4 +98,5 @@
 
     <script src="script.js"></script>
   </body>
+
 </html>

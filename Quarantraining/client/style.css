@@ -127,6 +127,7 @@ body {
   .card
   .card-body {
   border-top: 2px dotted var(--main-color);
+  height: 5.5vh;
 }
 
 .container
